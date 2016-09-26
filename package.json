@@ -1,0 +1,23 @@
+{
+  "name": "chattr",
+  "version": "0.0.0",
+  "description": "An SMTP-based chat client.",
+  "main": "index.js",
+  "dependencies": {
+    "emailjs-smtp-client": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demarius/chattr.git"
+  },
+  "author": "Demarius Chrite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demarius/chattr/issues"
+  },
+  "homepage": "https://github.com/demarius/chattr#readme"
+}

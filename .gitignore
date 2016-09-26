@@ -1,0 +1,7 @@
+#temp Vim Files.
+*.swp
+
+#node packages
+node_modules/*
+
+./.DS_Store
