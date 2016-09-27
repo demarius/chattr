@@ -4,7 +4,8 @@
   "description": "An SMTP-based chat client.",
   "main": "index.js",
   "dependencies": {
-    "emailjs-smtp-client": "^1.0.0"
+    "emailjs-smtp-client": "^1.0.0",
+    "smtp-server": "^1.15.0"
   },
   "devDependencies": {},
   "scripts": {
