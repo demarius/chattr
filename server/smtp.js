@@ -1,6 +1,6 @@
 var SMTPServer = require('smtp-server').SMTPServer;
 
-function server (port, address) {
+function server (options) {
     var server = new SMTPServer({
         hideSTARTTLS: true,
         onConnect: function (session, callback) {
@@ -15,10 +15,11 @@ function server (port, address) {
         }
     })
 
-    server.listen(port, address, function () {
-        if (arguments.length) {
-            console.log(arguments)
-        }
+    server.listen(options.port, options.address, function () {
+        console.log(options.message || '' +
+            'Server is listening on ' +
+                options.address + ':' +
+                options.port)
     })
 
     server.on('error', function (err) {
@@ -28,4 +29,4 @@ function server (port, address) {
     return { server: server }
 }
 
-Module.exports = server
+module.exports = server
