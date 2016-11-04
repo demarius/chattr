@@ -7,7 +7,9 @@
     "emailjs-smtp-client": "^1.0.0",
     "smtp-server": "^1.15.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+      "proof": "*"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
