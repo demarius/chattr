@@ -1,3 +1,8 @@
-var server = require('./server/smtp.js')
+var Server = require('./server/smtp.js')
+var Client= require('./client/')
 
-var app = server({ port: 6425, address: '127.0.0.1' })
+var app = Server({ port: 6425, address: '127.0.0.1' })
+
+Client({ port: 6425, address: '127.0.0.1' }, function (error, client) {
+    console.log(client)
+})
