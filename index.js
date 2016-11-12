@@ -5,4 +5,7 @@ var app = Server({ port: 6425, address: '127.0.0.1' })
 
 Client({ port: 6425, address: '127.0.0.1' }, function (error, client) {
     console.log(client)
+    app.onConnect = function (session, callback) {
+        //try overriding connect here
+    }
 })
