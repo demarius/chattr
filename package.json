@@ -5,10 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "emailjs-smtp-client": "^1.0.0",
+    "express": "^4.14.0",
+    "inlet": "^2.0.0",
     "smtp-server": "^1.15.0"
   },
   "devDependencies": {
-      "proof": "*"
+    "proof": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
