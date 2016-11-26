@@ -1,6 +1,7 @@
+var cadence = require('cadence')
+var Dispatcher = require('inlet/dispatcher')
 var express = require('express')
 var app = express()
-var Dispatcher = require('inlet/dispatcher')
 
 function serverAPI (key) {
     this._key = key
@@ -12,6 +13,6 @@ serverAPI.prototype.dispatcher = function (options) {
     return dispatcher.createDispatcher()
 }
 
-serverAPI.prototype.index = function () {
+serverAPI.prototype.index = cadence(function () {
     return 'Index'
-}
+})
