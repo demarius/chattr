@@ -4,7 +4,6 @@ function server (options) {
     var server = new SMTPServer({
         hideSTARTTLS: true,
         onConnect: function (session, callback) {
-            console.log(session)
             callback()
         },
         authOptional: true,
