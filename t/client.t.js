@@ -9,9 +9,10 @@ function prove (assert) {
     var server = Server({ port: 6425, address: '127.0.0.1' }).server
 
     Client({ port: 6425, address: '127.0.0.1' }, function (error, client) {
+        if (error) throw error
+
         client.close()
         server.close(function () {
-            console.log('closed')
         })
     })
 }
