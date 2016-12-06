@@ -1,6 +1,6 @@
 var SmtpClient = require('emailjs-smtp-client')
 
-function client (smtp, callback) {
+function client (smtp, from, to, callback) {
     var initiated = false,
         client = new SmtpClient('127.0.0.1', 6425, {
             ignoreTLS: true
@@ -11,8 +11,8 @@ function client (smtp, callback) {
             initiated = true
             console.log('client idle')
             client.useEnvelope({
-                from: "testAddress@home.com",
-                to: ["testAddress@work.com"]
+                from: from,
+                to: [ to ]
             })
         }
     }
