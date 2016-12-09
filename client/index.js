@@ -19,10 +19,8 @@ function client (smtp, from, to, callback) {
 
     client.onready = function (failed) {
         if (failed.length) {
-            console.log('failed to connect to ', failed)
             callback(failed)
         } else {
-            console.log('client ready')
             callback(null, client)
         }
     }
